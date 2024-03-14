@@ -1,0 +1,25 @@
+{
+  "name": "hello_app",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Core internal application",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "npm run build && conc 'npm:watch:*'",
+    "start": "npm run build && npm run run",
+    "run": "node dist/index.js",
+    "build": "tsc",
+    "watch:run": "node --watch dist/index.js",
+    "watch:build": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "typescript": "^5.4.2"
+  }
+}
